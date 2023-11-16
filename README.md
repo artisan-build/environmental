@@ -1,5 +1,7 @@
 # Environmental for Laravel
 
+**Under Construction** This package is not usable yet. Check back soon.
+
 Environmental provides tools for managing your environment variables in a safe and collaborative way. It provides an
 online editor where you can edit your .env file. Before any changes are saved, the original file is backed up and the
 new contents are validated. If you need to roll back to a previous version of your environment file, you can do it with 
