@@ -16,6 +16,8 @@ class EnvironmentalServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../config.php' => config_path('environmental.php'),
         ], 'config');
+
+        $this->loadRoutesFrom(__DIR__.'/../../routes.php');
 	}
 
 	public function boot(): void

@@ -42,9 +42,6 @@ Gate::define('edit-environment', function ($user, $environment) {
 ```
 
 
-If you want certain users to be able to edit environment variables in non-local environments, you can use the 
-`ArtisanBuild\Environmental\EditsEnvironments` trait on your user model. This trait contains a method 
-
 ## Additional Environment Files
 
 We use Laravel Vapor for several of our projects and to save GitHub Actions minutes, we deploy our staging and
