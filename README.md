@@ -7,9 +7,6 @@ online editor where you can edit your .env file. Before any changes are saved, t
 new contents are validated. If you need to roll back to a previous version of your environment file, you can do it with 
 single click.
 
-Additionally, Environmental integrates with [Scalpels](https://scalpels.app) to offer a premium feature that allows you
-to securely share your local environment variables with your team and manage who has access to individual keys.
-
 ## Installation
 
 ```bash
