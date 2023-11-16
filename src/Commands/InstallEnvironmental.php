@@ -4,6 +4,7 @@ namespace ArtisanBuild\Environmental\Commands;
 
 use Illuminate\Console\Command;
 
+use Illuminate\Support\Facades\Artisan;
 use function Laravel\Prompts\text;
 
 class InstallEnvironmental extends Command
@@ -13,13 +14,11 @@ class InstallEnvironmental extends Command
 
     public function handle(): int
     {
-        $backupPath = text('Where would you like to store your backups?', 'backup_path', base_path('.environmental'));
+        Artisan::call('vendor:publish', [
+            '--provider' => 'ArtisanBuild\Environmental\Providers\EnvironmentalServiceProvider',
+            '--tag' => 'config',
+        ]);
 
-        if ($backupPath !== config('environmental.backup_path')) {
-            $this->info('Setting backup path to ' . $backupPath);
-
-            config(['environmental.backup_path' => $backupPath]);
-        }
         return self::SUCCESS;
     }
 }
