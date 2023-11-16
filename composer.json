@@ -1,0 +1,26 @@
+{
+	"name": "artisan-build/environmental",
+	"description": "A package for managing your production .env files from your local environment",
+	"type": "library",
+	"version": "1.0",
+	"license": "MIT",
+	"require": {
+        "illuminate/support": "^10.0",
+        "laravel/prompts": "*",
+        "orchestra/testbench": "^8.0"
+    },
+	"autoload": {
+		"psr-4": {
+			"ArtisanBuild\\Environmental\\": "src/",
+			"ArtisanBuild\\Environmental\\Tests\\": "tests/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"ArtisanBuild\\Environmental\\Providers\\EnvironmentalServiceProvider"
+			]
+		}
+	}
+}
