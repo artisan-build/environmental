@@ -41,7 +41,6 @@ Gate::define('edit-environment', function ($user, $environment) {
 });
 ```
 
-
 ## Additional Environment Files
 
 We use Laravel Vapor for several of our projects and to save GitHub Actions minutes, we deploy our staging and

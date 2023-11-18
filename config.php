@@ -6,4 +6,5 @@ return [
     'backup_path' => base_path('.environmental'),
     'minimum_backup_age' => 60 * 60 * 24 * 7, // We won't delete any backup that is not at least 1 week old
     'additional_environment_files' => [],
+    'form_layout' => 'environmental::layout', // Change to your own app-layout (or whatever) to match your site
 ];

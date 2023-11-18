@@ -8,7 +8,8 @@
         "illuminate/support": "^10.0",
         "laravel/prompts": "*",
         "livewire/livewire": "^3.0",
-        "orchestra/testbench": "^8.0"
+        "orchestra/testbench": "^8.0",
+        "calebporzio/sushi": "^2.4"
     },
     "autoload": {
         "psr-4": {
