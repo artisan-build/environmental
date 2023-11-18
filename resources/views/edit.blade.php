@@ -1,5 +1,5 @@
 <div class="h-screen flex">
-    <div class="w-1/2" wire:poll="getDirty">
+    <div class="w-1/2">
         <h3 class="text-xl font-bold py-4">Editing File</h3>
 
         <section id="diff" class="space-y-4 text-sm">

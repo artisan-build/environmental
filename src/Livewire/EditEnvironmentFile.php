@@ -35,8 +35,14 @@ class EditEnvironmentFile extends Component implements HasForms
             ->schema(collect($this->data)->map(function ($value, $key) {
                 return TextInput::make('data.' . $key)
                     ->default($value)
+                    ->lazy()
                     ->label($key);
             })->except('id')->toArray());
+    }
+
+    public function updated($property): void
+    {
+        $this->getDirty();
     }
 
     public function getDirty(): void
