@@ -22,7 +22,7 @@ class Environment extends Model
     public function getRows(): array
     {
         $records = $this->getArraysFromEnvironmentFiles();
-        $keys = collect($records)->map(fn($record) => array_keys($record))->flatten()->unique()->toArray();
+        $keys = collect($records)->map(fn($record) => array_keys($record))->flatten()->unique()->sort()->toArray();
         $normalized = collect($records)->map(fn($record) => array_merge(array_fill_keys($keys, ''), $record))->sortKeys()->toArray();
         return array_values($normalized); // Reset the indexes on the array because Sushi expects them to be sequential starting with 0
     }

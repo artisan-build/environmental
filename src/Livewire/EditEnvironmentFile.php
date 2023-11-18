@@ -7,8 +7,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 
 class EditEnvironmentFile extends Component implements HasForms
@@ -24,7 +22,6 @@ class EditEnvironmentFile extends Component implements HasForms
 
     public function mount(string $file = '.env')
     {
-
         $this->original = $this->data = Environment::where('id', $this->file)->first()->toArray();
         $this->file = $file;
     }
