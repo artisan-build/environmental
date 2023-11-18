@@ -1,6 +1,6 @@
 <?php
 
-namespace ArtisanBuild\Environmental;
+namespace ArtisanBuild\Environmental\Models;
 
 use Dotenv\Dotenv;
 use Illuminate\Database\Eloquent\Model;

@@ -1,7 +1,13 @@
 <div class="h-screen flex">
-    <div class="w-1/2">
-        <h3 class="text-xl font-bold py-4">Editing File</h3>
+    <div class="w-1/3">
+        @foreach ($files as $env)
+            <div class="mb-4">
+                <a href="{{ route('environmental.edit', $env) }}" class="text-blue-600 hover:text-blue-800">{{ $env }}</a>
+            </div>
+        @endforeach
 
+    </div>
+    <div class="w-1/3">
         <section id="diff" class="space-y-4 text-sm">
             @foreach ($dirty as $key => $value)
                 <div>
@@ -12,7 +18,6 @@
                         {{ $key }}: <span class="text-green-600">{{ data_get($value, 'new') }}</span>
                     </div>
                 </div>
-
             @endforeach
         </section>
 
@@ -22,7 +27,8 @@
         </div>
         @endif
     </div>
-    <div class="w-1/2 overflow-auto my-4">
+
+    <div class="w-1/3 overflow-auto my-4">
         <form wire:submit.prevent>
             {{ $this->form }}
         </form>
